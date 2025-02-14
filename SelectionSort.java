@@ -21,21 +21,20 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         int[] arr = {64, 25, 12, 22, 11};
-        
-        System.out.println("Array antes da ordenação:");
+        System.out.print("Array original: ");
         printArray(arr);
 
         selectionSort(arr);
-        
-        System.out.println("Array após a ordenação:");
+
+        System.out.print("Array ordenado: ");
         printArray(arr);
     }
 
+    // Método auxiliar para imprimir o array
     public static void printArray(int[] arr) {
-        for (int num : arr) {
-            System.out.print(num + " ");
+        for (int i : arr) {
+            System.out.print(i + " ");
         }
         System.out.println();
     }
 }
-
