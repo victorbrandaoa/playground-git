@@ -1,21 +1,20 @@
 public class SelectionSort {
-
     public static void selectionSort(int[] arr) {
         int n = arr.length;
 
-        // Percorre todos os elementos do array
         for (int i = 0; i < n - 1; i++) {
-            // Encontra o índice do menor elemento restante
-            int minIdx = i;
+            int minIndex = i;
+
+            // Encontra o menor elemento no restante do array
             for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minIdx]) {
-                    minIdx = j;
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
                 }
             }
 
-            // Troca o elemento atual pelo menor elemento encontrado
-            int temp = arr[minIdx];
-            arr[minIdx] = arr[i];
+            // Troca o menor elemento encontrado com o primeiro elemento não ordenado
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
             arr[i] = temp;
         }
     }
